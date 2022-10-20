@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Node {
-    // Coordinate of Node on ASKII grid.
+    // Coordinate of Node on ASCII grid.
     private int[] coordinate;
     // Direction taken to reach current node from parent node.
     private String direction;

@@ -6,7 +6,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class Maze {
-    // ASKII grid representing the searchable maze.
+    // ASCII grid representing the searchable maze.
     private char[][] grid;
     // Coordinate of starting position.
     private int[] start;
@@ -26,6 +26,21 @@ public class Maze {
             };
             start = new int[]{1, 5};
             goal = new int[]{5, 1};
+        } else if (size.equals("medium")) {
+            grid = new char[][]{
+                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+                {'#', '-', '-', '-', '-', '-', '-', '#', 'O', '#'},
+                {'#', '-', '#', '#', '#', '#', '-', '-', '-', '#'},
+                {'#', '-', '-', '-', '-', '#', '#', '-', '#', '#'},
+                {'#', '#', '#', '#', '-', '#', '#', '-', '-', '#'},
+                {'#', '-', '-', '-', '-', '-', '#', '#', '-', '#'},
+                {'#', '-', '#', '#', '#', '-', '-', '-', '-', '#'},
+                {'#', '-', '#', 'X', '#', '#', '#', '#', '-', '#'},
+                {'#', '-', '-', '-', '#', '-', '-', '-', '-', '#'},
+                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+            };
+            start = new int[]{1, 8};
+            goal = new int[]{7, 3};
         }
     }
 
@@ -121,7 +136,7 @@ public class Maze {
         return null;
     }
 
-    // Returns ASKII grid of maze.
+    // Returns ASCII grid of maze.
     public char[][] getGrid() {
         return grid;
     }
